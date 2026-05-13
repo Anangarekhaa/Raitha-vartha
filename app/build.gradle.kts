@@ -18,6 +18,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Ensure GEMINI_API_KEY is available in BuildConfig
+        // It will be overridden by the secrets-gradle-plugin if present in local.properties
+        buildConfigField("String", "GEMINI_API_KEY", "\"${project.findProperty("GEMINI_API_KEY") ?: "AIzaSyAzWLjJhtJ1tu1dmCKHXpeoPBRj4uPGUkw"}\"")
     }
 
     buildTypes {
