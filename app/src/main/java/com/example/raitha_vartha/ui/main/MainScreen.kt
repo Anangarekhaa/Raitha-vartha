@@ -23,7 +23,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.filled.ChevronRight
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
@@ -219,7 +219,7 @@ fun MainScreen(viewModel: TipViewModel = viewModel()) {
                                 color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold
                             )
                             Spacer(modifier = Modifier.weight(1f))
-                            Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null, tint = Color.White.copy(alpha = 0.6f), modifier = Modifier.size(16.dp))
+                            Icon(Icons.AutoMirrored.Filled.ChevronRight, contentDescription = null, tint = Color.White.copy(alpha = 0.6f), modifier = Modifier.size(16.dp))
                         }
                     }
                 }
@@ -295,19 +295,19 @@ fun MainScreen(viewModel: TipViewModel = viewModel()) {
                     TipCardContent(tip, onBookmarkClick = { viewModel.toggleBookmark(tip) })
                 }
 
-                // Indicators and Navigation Help - REDUCED SIZES
+                // Indicators and Navigation Help - REDUCED SIZES AS REQUESTED
                 Column(
                     modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 30.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = 6.dp)) {
-                        Text("👈", fontSize = 14.sp)
-                        Text("👆", fontSize = 14.sp, modifier = Modifier.padding(horizontal = 14.dp))
-                        Text("👉", fontSize = 14.sp)
+                        Text("👈", fontSize = 10.sp)
+                        Text("👆", fontSize = 10.sp, modifier = Modifier.padding(horizontal = 14.dp))
+                        Text("👉", fontSize = 10.sp)
                     }
                     Text(
                         if (currentLanguage == "en") "Swipe for next tip" else "ಮುಂದಿನ ಸಲಹೆಗಾಗಿ ಸ್ವೈಪ್ ಮಾಡಿ",
-                        color = Color(0xFF1B5E20), fontSize = 12.sp, fontWeight = FontWeight.Bold
+                        color = Color(0xFF1B5E20), fontSize = 9.sp, fontWeight = FontWeight.Bold
                     )
                     Spacer(modifier = Modifier.height(20.dp))
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

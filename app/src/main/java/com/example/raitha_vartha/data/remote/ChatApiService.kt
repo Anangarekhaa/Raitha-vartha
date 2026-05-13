@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.util.Log
+import com.example.raitha_vartha.BuildConfig
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -12,7 +13,8 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class ChatApiService(private val context: Context) {
-    private val apiKey = "AIzaSyAzWLjJhtJ1tu1dmCKHXpeoPBRj4uPGUkw" 
+    // API Key is now safely pulled from local.properties via BuildConfig
+    private val apiKey = BuildConfig.GEMINI_API_KEY
     private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent"
     private val gson = Gson()
 
